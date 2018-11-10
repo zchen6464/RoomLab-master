@@ -7,7 +7,7 @@ public class WinningRoom extends Room
 {
 	public WinningRoom(int x, int y) {
 			super(x, y);
-			str = " ";
+			str = "nempty"; //not empty room
 		}
 
 		/**
@@ -18,7 +18,7 @@ public class WinningRoom extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("You found the exit. you have successfully escaped the dungeon");
+		System.out.println("You found the exit. you have successfully escaped the dungeon"); //wins, game ends
 		Runner.gameOff();
 		}
 }

@@ -1,16 +1,19 @@
 package People;
 
-import java.security.PublicKey;
+import java.util.ArrayList;
 
 /**
  * Person represents the player as they move through the game.
  */
 public class Person {
+	public static int turns = 0;
 	String firstName;
 	String familyName;
 	int xLoc, yLoc;
-	public int php = 100;
+	public static String[] equipment = {"loaf of wheat bread"};
+	public static int php = 100;
 	public boolean fight = false;
+	public boolean weapon = false;
 
 
 	public int getxLoc() {
@@ -36,6 +39,12 @@ public class Person {
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
 	}
-
-
+	public static void updateEquip(ArrayList list)
+	{
+		list.toArray(equipment);
+	}
+	public static void updateTurns()
+	{
+		turns++;
+	}
 }
